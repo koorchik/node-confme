@@ -1,0 +1,14 @@
+{
+  "listenPort": "{{PORT}}",
+  "apiPath": "https://{{DOMAIN}}:{{PORT}}/api/v1",
+  "staticUrl": "https://{{DOMAIN}}:{{PORT}}/static",
+  "mainPage": "https://{{DOMAIN}}:{{PORT}}",
+  "mail": {
+    "from": "MyApp",
+    "transport": "SMTP",
+    "auth": {
+      "user": "{{SMTP_USER}}",
+      "pass": "{{SMTP_PASS}}"
+    }
+  }
+}

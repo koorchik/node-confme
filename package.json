@@ -1,0 +1,43 @@
+{
+  "name": "confme",
+  "version": "0.0.1",
+  "description": "Opinionated config library that allows you to have complex config and behaves according to 12-factors apps rules ",
+  "main": "src/confme.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koorchik/node-confme.git"
+  },
+  "keywords": [
+    "config",
+    "json",
+    "env",
+    "environment",
+    "twelve factors",
+    "12 factors"
+  ],
+  "author": "koorchik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koorchik/node-confme/issues"
+  },
+  "homepage": "https://github.com/koorchik/node-confme#readme",
+  "ava": {
+    "files": [
+      "tests/*.js"
+    ]
+  },
+  "dependencies": {
+    "dotenv-defaults": "^1.0.2",
+    "livr": "^2.2.4",
+    "livr-extra-rules": "^1.2.1"
+  },
+  "devDependencies": {
+    "ava": "^1.3.1"
+  }
+}

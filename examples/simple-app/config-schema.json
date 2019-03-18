@@ -1,0 +1,14 @@
+{
+  "listenPort": ["required", "positive_integer"],
+  "apiPath": ["required", "url"],
+  "staticUrl": ["required", "url"],
+  "mainPage": ["required", "url"],
+  "mail": ["required", {"nested_object": {
+    "from": ["required", "string"],
+    "transport": ["required", {"one_of": ["SMTP", "SENDMAIL"] }],
+    "auth": {"nested_object": {
+      "user": ["required", "string"],
+      "pass": ["required", "string"]
+    }}
+  }}]
+}

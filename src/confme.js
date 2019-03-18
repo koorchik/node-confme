@@ -26,7 +26,11 @@ function validateConfig(config, livrSchemaPath) {
   const validConfig = validator.validate(config);
 
   if (!validConfig) {
-    throw new Error(JSON.stringify(validator.getErrors(), null, 2));
+    const error = {
+      FAILED_CONFIG: config,
+      ERRORS: validator.getErrors()
+    };
+    throw new Error(JSON.stringify(error, null, 2));
   }
 
   return validConfig;

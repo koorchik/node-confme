@@ -2,13 +2,13 @@
 
 Opinionated config library that allows you to have complex config and behaves according to "Twelve Factor App" rules.
 
-- It is build on top of ["dotenv-defaults"](https://www.npmjs.com/package/dotenv-defaults)
+- It is build on top of [dotenv-defaults](https://www.npmjs.com/package/dotenv-defaults)
 - Uses [LIVR](https://www.npmjs.com/package/livr) ([with extra rules](https://www.npmjs.com/package/livr-extra-rules)) for config schema validation.
-- Follows the ideas of ["Twelve Factor App"](https://12factor.net/config)
+- Follows the ideas of [Twelve Factor App](https://12factor.net/config)
 
 ### How does it work?
 
-"confme" loads your config and replaces placeholders with environment variables. For environemnt loading it uses ["dotenv-defaults"](https://www.npmjs.com/package/dotenv-defaults), so you can create ".env.defaults" file to set default values of environment variables. If you have placeholders for non set environment variables then "confme" will throw an error.
+"confme" loads your config and replaces placeholders with environment variables. For environemnt loading it uses [dotenv-defaults](https://www.npmjs.com/package/dotenv-defaults), so you can create ".env.defaults" file to set default values of environment variables. If you have placeholders for non set environment variables then "confme" will throw an error.
 
 You can pass a path to a JSON file with [LIVR](https://www.npmjs.com/package/livr) rules as a second argument. In this case, it will use [LIVR](https://www.npmjs.com/package/livr) ([with extra rules](https://www.npmjs.com/package/livr-extra-rules)) to validate the config.
 
@@ -80,3 +80,4 @@ Try it with
 
 - `node app.js`
 - `DOMAIN=myapp.com PORT=80 node app.js`
+- `PORT='AAA' node app.js`

@@ -25,7 +25,9 @@
     "livr",
     "config validation",
     "twelve factor app",
-    "12 factor app"
+    "12 factor app",
+    "docker",
+    "lambda"
   ],
   "author": "koorchik",
   "license": "MIT",

@@ -8,6 +8,12 @@ Opinionated config library that allows you to have complex config and behaves ac
 
 Read [Motivation section](#motivation)
 
+So, it suits well for:
+
+1. Local development
+2. Docker environment
+3. AWS Lambda and alternatives 
+
 ### How does it work?
 
 "confme" loads your config and replaces placeholders with environment variables. For environemnt loading it uses [dotenv-defaults](https://www.npmjs.com/package/dotenv-defaults), so you can create ".env.defaults" file to set default values of environment variables. If you have placeholders for non set environment variables then "confme" will throw an error.

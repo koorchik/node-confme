@@ -6,7 +6,7 @@ Opinionated config library that allows you to have complex config and behaves ac
 - Uses [LIVR](https://www.npmjs.com/package/livr) ([with extra rules](https://www.npmjs.com/package/livr-extra-rules)) for config schema validation.
 - Follows the ideas of [Twelve Factor App](https://12factor.net/config)
 
-Read [Motivation section](#Motivation)
+Read [Motivation section](#motivation)
 
 ### How does it work?
 
@@ -97,4 +97,4 @@ You can use [dotenv-defaults](https://www.npmjs.com/package/dotenv-defaults) whi
 
 But in real life you have rather complex configs and you do not want to define all of the values in ENV, you want to use your config as a template and build final config based on this template. It is very common approach for ansible users. **confme** allowes to do that.
 
-Moreover, **confme** allowes you to define LIVR schema to validate config. It can be heplful if you have complex configs with a lot of options but I prefer to use validation schema even with small configs.
+Moreover, **confme** allowes you to define [LIVR](http://livr-spec.org/) schema to validate config. It can be heplful if you have complex configs with a lot of options but I prefer to use validation schema even with small configs.

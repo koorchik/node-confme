@@ -1,7 +1,7 @@
 {
   "name": "confme",
   "version": "0.0.6",
-  "description": "Opinionated config library that allows you to have complex config and behaves according to 12-factor app rules ",
+  "description": "Opinionated config library that allows you to have a complex config that behaves according to 12-factor app rules ",
   "main": "src/confme.js",
   "directories": {
     "test": "tests"
@@ -22,8 +22,10 @@
     "env",
     "environment",
     "json",
-    "twelve factors",
-    "12 factors"
+    "livr",
+    "config validation",
+    "twelve factor app",
+    "12 factor app"
   ],
   "author": "koorchik",
   "license": "MIT",

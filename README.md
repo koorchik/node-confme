@@ -6,6 +6,8 @@ Opinionated config library that allows you to have complex config and behaves ac
 - Uses [LIVR](https://www.npmjs.com/package/livr) ([with extra rules](https://www.npmjs.com/package/livr-extra-rules)) for config schema validation.
 - Follows the ideas of [Twelve Factor App](https://12factor.net/config)
 
+Read [Motivation section](#Motivation)
+
 ### How does it work?
 
 "confme" loads your config and replaces placeholders with environment variables. For environemnt loading it uses [dotenv-defaults](https://www.npmjs.com/package/dotenv-defaults), so you can create ".env.defaults" file to set default values of environment variables. If you have placeholders for non set environment variables then "confme" will throw an error.
@@ -82,3 +84,17 @@ Try it with
 - `node app.js`
 - `DOMAIN=myapp.com PORT=80 node app.js`
 - `PORT='AAA' node app.js`
+
+
+### Motivation
+
+According to [Twelve Factor App](https://12factor.net/config) your config should be passed in envrironment variables. If you are not familiar with ideas of "Twelve Factor App" you definetely should read it.
+
+Having all config variables in env variables is very flexible. You can run your app with docker and without docker. Moreover, you can reuse the same builds across all environments. For example, you can build an image, test it on QA and then run the same image well-tested imaged on production.  
+
+But passing the conf in environment variables is not very convenient. So, there a popular library called [dotenv](dotenv) which allows you to store environment variables in ".env" file. But you should not commit it and you should have a sample in repository (like ".env.sample" which will be copied to ".env" on deployments without docker).
+You can use [dotenv-defaults](https://www.npmjs.com/package/dotenv-defaults) which allows you to have file ".env.defaults" with default values commited to your repository. 
+
+But in real life you have rather complex configs and you do not want to define all of the values in ENV, you want to use your config as a template and build final config based on this template. It is very common approach for ansible users. **confme** allowes to do that.
+
+Moreover, **confme** allowes you to define LIVR schema to validate config. It can be heplful if you have complex configs with a lot of options but I prefer to use validation schema even with small configs.

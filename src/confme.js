@@ -4,9 +4,16 @@ const fs = require("fs");
 
 function confme(configPath, livrSchemaPath) {
   const template = fs.readFileSync(configPath).toString();
-
   const configStr = replace(template, process.env);
-  let config = JSON.parse(configStr);
+
+  let config = {};
+
+  try {
+    config = JSON.parse(configStr);
+  } catch (error) {
+    console.error("CANNOT PARSE JSON:", configStr);
+    throw error;
+  }
 
   if (livrSchemaPath) {
     config = validateConfig(config, livrSchemaPath);

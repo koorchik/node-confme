@@ -1,8 +1,18 @@
-require("dotenv-defaults").config();
-
+const dotEnv = require("dotenv-defaults");
 const fs = require("fs");
 
-function confme(configPath, livrSchemaPath) {
+function confme(
+  configPath,
+  livrSchemaPath = null,
+  envFilePath = './.env',
+  defaultsEnvFilePath = './.env.defaults'
+) {
+  dotEnv.config({
+      path: envFilePath,
+      encoding: 'utf8',
+      defaults: defaultsEnvFilePath
+  });
+
   const template = fs.readFileSync(configPath).toString();
   const configStr = replace(template, process.env);
 

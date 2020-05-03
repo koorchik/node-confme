@@ -18,7 +18,7 @@ So, it suits well for:
 
 "confme" loads your config and replaces placeholders with environment variables. For environemnt loading it uses [dotenv-defaults](https://www.npmjs.com/package/dotenv-defaults), so you can create ".env.defaults" file to set default values of environment variables. If you have placeholders for non set environment variables then "confme" will throw an error.
 
-You can pass a path to a JSON file with [LIVR](https://www.npmjs.com/package/livr) rules as a second argument. In this case, it will use [LIVR](https://www.npmjs.com/package/livr) ([with extra rules](https://www.npmjs.com/package/livr-extra-rules)) to validate the config.
+You can pass a path to a JSON/JSON5 file with [LIVR](https://www.npmjs.com/package/livr) rules as a second argument. In this case, it will use [LIVR](https://www.npmjs.com/package/livr) ([with extra rules](https://www.npmjs.com/package/livr-extra-rules)) to validate the config.
 
 ### Usage examples
 

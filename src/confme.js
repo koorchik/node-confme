@@ -1,5 +1,6 @@
 require("dotenv-defaults").config();
 
+const JSON5 = require("json5")
 const fs = require("fs");
 
 function confme(configPath, livrSchemaPath) {
@@ -9,9 +10,9 @@ function confme(configPath, livrSchemaPath) {
   let config = {};
 
   try {
-    config = JSON.parse(configStr);
+    config = JSON5.parse(configStr);
   } catch (error) {
-    console.error("CANNOT PARSE JSON:", configStr);
+    console.error("CANNOT PARSE JSON5:", configStr);
     throw error;
   }
 
@@ -26,7 +27,7 @@ function validateConfig(config, livrSchemaPath) {
   const LIVR = require("livr");
   const livrExtraRules = require("livr-extra-rules");
 
-  const livrRules = JSON.parse(fs.readFileSync(livrSchemaPath).toString());
+  const livrRules = JSON5.parse(fs.readFileSync(livrSchemaPath).toString());
   const validator = new LIVR.Validator(livrRules, true);
   validator.registerRules(livrExtraRules);
 

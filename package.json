@@ -1,6 +1,6 @@
 {
   "name": "confme",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Opinionated config library that allows you to have complex config and behaves according to Twelve Factor App rules",
   "main": "src/confme.js",
   "directories": {
@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "dotenv-defaults": "^1.1.1",
+    "json5": "^2.1.3",
     "livr": "^2.2.4",
     "livr-extra-rules": "^1.2.1"
   },

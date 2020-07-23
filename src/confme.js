@@ -45,7 +45,7 @@ function validateConfig(config, livrSchemaPath) {
 }
 
 function replace(template, vars) {
-  return template.replace(/\{\{(.+?)\}\}/g, (match, p1) => {
+  return template.replace(/\{\{\s*(.+?)\s*\}\}/g, (match, p1) => {
     if (vars.hasOwnProperty(p1)) {
       return vars[p1];
     } else {

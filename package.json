@@ -7,7 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "coverage": "c8 ava",
+    "lint": "eslint **/*.js"
   },
   "repository": {
     "type": "git",
@@ -47,6 +49,17 @@
     "livr-extra-rules": "^1.2.1"
   },
   "devDependencies": {
-    "ava": "^3.15.0"
+    "ava": "^3.15.0",
+    "babel-eslint": "^10.1.0",
+    "c8": "^7.9.0",
+    "eslint": "^7.32.0",
+    "eslint-config-webbylab": "^5.4.1",
+    "eslint-plugin-fetch": "0.0.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-more": "^1.0.3",
+    "eslint-plugin-no-require-lodash": "^1.1.0",
+    "eslint-plugin-prefer-spread": "^1.0.3",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-security": "^1.4.0"
   }
 }

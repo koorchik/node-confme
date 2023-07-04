@@ -1,7 +1,0 @@
-{
-    "extends": "webbylab",
-    "rules": {
-        "import/no-commonjs": 0,
-        "camelcase": 0
-    }
-}
